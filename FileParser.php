@@ -22,9 +22,7 @@ class FileParser
                 $stringNumber = $key + 1;
                 $firstPos = mb_strpos($value, $searchQuery, 0) + 1;
                 break;
-            }
-
-            if ($key === array_key_last($fileSrc)) {
+            } elseif ($key === array_key_last($fileSrc)) {
                 return "Вхождение '$searchQuery' не найдено. \n";
             }
         }
